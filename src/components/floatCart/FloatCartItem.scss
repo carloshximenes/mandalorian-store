@@ -1,0 +1,28 @@
+.float-cart-item {
+	display: flex;
+	flex-direction: row;
+	gap: 16px;
+	&__image {
+		min-width: 100px;
+		max-width: 100px;
+		height: 100px;
+		border: 1px solid #000;
+	}
+	&__infos {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 100%;
+	}
+	&__name {
+		font-size: 22px;
+		flex: 1 1 100%;
+	}
+	&__price {
+		&__value {
+			font-size: 32px;
+			font-weight: 700;
+		}
+	}
+}

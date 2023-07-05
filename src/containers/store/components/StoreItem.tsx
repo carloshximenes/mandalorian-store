@@ -1,14 +1,23 @@
 import { useState } from 'react';
 import Rating from '../../../components/rating/Rating';
 import { Equipment } from '../../../types/equipmentType';
-import './StoreItem.scss';
 import StoreItemModalDetails from './StoreItemModalDetails';
+import { useCartContext } from '../hooks/useCartContext';
+import './StoreItem.scss';
 
 type StoreItemProps = Equipment;
 
 function StoreItem({ ...props }: StoreItemProps) {
 	const { name, image, price, isAvailable, rating } = props;
 	const [showDetails, setShowDetails] = useState(false);
+
+	const { addItem } = useCartContext();
+
+	const addItemHandler = () => {
+		if (!isAvailable) return;
+		addItem(props, 1);
+	};
+
 	return (
 		<>
 			<div className="store-item">
@@ -19,7 +28,7 @@ function StoreItem({ ...props }: StoreItemProps) {
 					<Rating className="store-item__rating" value={+rating} />
 					<span className="store-item__name">{name}</span>
 				</div>
-				<button className="store-item__add-to-cart" type="button" disabled={!isAvailable}>
+				<button className="store-item__add-to-cart" type="button" disabled={!isAvailable} onClick={addItemHandler}>
 					ADD TO CART
 				</button>
 			</div>

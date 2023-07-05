@@ -1,0 +1,69 @@
+.float-cart {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background-color: #34495e;
+	padding: 20px;
+	border-radius: 50%;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	&__cart-icon {
+		color: #fff;
+		font-size: 32px;
+		cursor: pointer;
+	}
+
+	&__item-count {
+		position: absolute;
+		transform: translate(-50%, -50%);
+		background-color: #125c12;
+		color: #ffffff;
+		font-size: 12px;
+		font-weight: 700;
+		padding: 4px 8px;
+		border-radius: 50%;
+		margin-top: -10px;
+		margin-left: 10px;
+	}
+	&__modal {
+		color: #000;
+	}
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+	&__total {
+		display: flex;
+		justify-content: flex-end;
+	}
+	&__actions {
+		display: flex;
+		flex-direction: row;
+		gap: 16px;
+		justify-content: flex-end;
+	}
+	&__order {
+		background: #125c12;
+	}
+
+	&__clear {
+		background: #5c1212;
+	}
+
+	&__delivery-info {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		padding-bottom: 8px;
+		&__name,
+		&__address {
+			height: 45px;
+		}
+	}
+
+	&__order-sent {
+		color: #666;
+		padding: 16px;
+	}
+}

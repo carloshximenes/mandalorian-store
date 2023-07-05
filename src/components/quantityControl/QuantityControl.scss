@@ -1,0 +1,33 @@
+.quantity-control {
+	display: flex;
+	flex-direction: row;
+	&__button {
+		border: 0;
+		border-radius: 0;
+		color: #fff;
+		background: #34495E;
+        cursor: pointer;
+		&:disabled {
+			cursor: initial;
+			background: #ccc;
+		}
+		&:first-of-type {
+			border-top-left-radius: 8px;
+			border-bottom-left-radius: 8px;
+		}
+		&:last-of-type {
+			border-top-right-radius: 8px;
+			border-bottom-right-radius: 8px;
+		}
+	}
+	&__value {
+		border: 0;
+        height: 45px;
+		width: 50px;
+		text-align: center;
+		font-size: 22px;
+		font-weight: 600;
+        margin: 0;
+        padding: 0;
+	}
+}
