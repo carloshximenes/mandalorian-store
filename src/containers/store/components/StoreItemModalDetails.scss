@@ -1,0 +1,36 @@
+@import './StoreItem.scss';
+
+.store-details {
+	display: flex;
+	&__image {
+		@extend .store-item__image;
+		border: 1px solid #000;
+	}
+	&__infos {
+		@extend .store-item__infos;
+		color: #000;
+	}
+	&__name {
+		@extend .store-item__name;
+		font-size: 26px;
+		display: flex;
+	}
+	&__price {
+		@extend .store-item__price;
+	}
+	&__description {
+		@extend .store-item__description;
+		font-size: 18px;
+	}
+	&__price {
+		@extend .store-item__price;
+		&__value {
+			font-size: 32px;
+		}
+	}
+	&__add-to-cart {
+		@extend .store-item__add-to-cart;
+		flex: 1 1 100%;
+		margin: 0;
+	}
+}

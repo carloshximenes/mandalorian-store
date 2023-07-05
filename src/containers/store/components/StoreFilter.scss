@@ -1,0 +1,66 @@
+.store-filter {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 8px;
+	justify-content: space-between;
+	&__search,
+	&__min-rating,
+	&__max-rating,
+	&__min-price,
+	&__max-price {
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+		font-size: 16px;
+	}
+
+	&__search {
+		width: 100%;
+	}
+
+	&__min-rating,
+	&__max-rating,
+	&__min-price,
+	&__max-price {
+		width: 15%;
+	}
+
+	&__search-btn {
+		background: #125c12;
+		font-size: 22px;
+		width: 15%;
+		height: 51px;
+		align-self: flex-end;
+		margin: 0;
+	}
+
+	@media (max-width: 600px) {
+		&__min-rating,
+		&__max-rating,
+		&__min-price,
+		&__max-price,
+		&__search-btn {
+			width: 100%;
+		}
+
+		&__search-btn {
+			margin: 0 auto;
+		}
+	}
+
+	@media (min-width: 601px) and (max-width: 920px) {
+		justify-content: space-between;
+		&__min-rating,
+		&__max-rating,
+		&__min-price,
+		&__max-price,
+		&__search-btn {
+			width: calc(50% - 8px);
+		}
+
+		&__search-btn {
+			margin: 0 auto;
+		}
+	}
+}
