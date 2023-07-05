@@ -23,10 +23,6 @@ export const getLastElement = <T>(arr: T[]): T | undefined => (arr.length > 0 ? 
 
 export const removeLastElement = <T>(arr: T[]): T[] => arr.slice(0, -1);
 
-export const isFirstElement = (arr: unknown[], index: number): boolean => index === 0;
-
-export const isLastElement = <T>(arr: T[], index: number): boolean => index === arr.length - 1;
-
 export const sortAscendingByKey = <T, K extends keyof T>(arr: T[], key: K): T[] => [
 	...arr.sort((a, b) => (a[key] as number) - (b[key] as number)),
 ];

@@ -1,6 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Cart } from '../../types/cartType';
-import { postCart } from '../actions/cartAction';
 
 type CartState = {
 	cart: Cart;
@@ -23,9 +22,6 @@ export const cartSlice = createSlice({
 	initialState,
 	reducers: {
 		setCart,
-	},
-	extraReducers: builder => {
-		builder.addCase(postCart.fulfilled, setCart);
 	},
 });
 
